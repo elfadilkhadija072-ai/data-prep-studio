@@ -1,0 +1,221 @@
+﻿/**
+ * Module de communication avec l'API Backend DataPrep Studio.
+ */
+
+const API_BASE = '/api';
+
+export async function uploadDataset(file, demo = null) {
+  let url = `${API_BASE}/upload`;
+  const options = { method: 'POST' };
+
+  if (demo) {
+    url += `?demo=${encodeURIComponent(demo)}`;
+  } else if (file) {
+    const formData = new FormData();
+    formData.append('file', file);
+    options.body = formData;
+  }
+
+  const res = await fetch(url, options);
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: 'Erreur réseau' }));
+    throw new Error(err.detail || 'Échec du chargement du fichier.');
+  }
+  return res.json();
+}
+
+export async function getSession(sessionId) {
+  const res = await fetch(`${API_BASE}/session/${sessionId}`);
+  if (!res.ok) throw new Error('Session introuvable');
+  return res.json();
+}
+
+export async function configureSession(payload) {
+  const res = await fetch(`${API_BASE}/configure`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error('Échec de la configuration');
+  return res.json();
+}
+
+export async function getKpis(sessionId) {
+  const res = await fetch(`${API_BASE}/eda/kpis/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible de charger les KPIs');
+  return res.json();
+}
+
+export async function getFeaturesTable(sessionId) {
+  const res = await fetch(`${API_BASE}/eda/features/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible de charger le tableau des features');
+  return res.json();
+}
+
+export async function getColumnDistribution(sessionId, col, zoomP99 = false, logScale = false) {
+  const params = new URLSearchParams({ zoom_p99: zoomP99, log_scale: logScale });
+  const res = await fetch(`${API_BASE}/eda/distribution/${sessionId}/${encodeURIComponent(col)}?${params}`);
+  if (!res.ok) throw new Error('Impossible de charger la distribution');
+  return res.json();
+}
+
+export async function getCorrelations(sessionId, method = 'pearson') {
+  const res = await fetch(`${API_BASE}/eda/correlations/${sessionId}?method=${method}`);
+  if (!res.ok) throw new Error('Impossible de charger la matrice de corrélation');
+  return res.json();
+}
+
+export async function getScatterData(sessionId, xCol, yCol) {
+  const params = new URLSearchParams({ x: xCol, y: yCol });
+  const res = await fetch(`${API_BASE}/eda/scatter/${sessionId}?${params}`);
+  if (!res.ok) throw new Error('Impossible de charger le nuage de points');
+  return res.json();
+}
+
+export async function getQualityReport(sessionId) {
+  const res = await fetch(`${API_BASE}/eda/quality/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible de charger le rapport de qualité');
+  return res.json();
+}
+
+export async function getPrepPlan(sessionId) {
+  const res = await fetch(`${API_BASE}/prep/plan/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible de charger le plan de préparation');
+  return res.json();
+}
+
+export async function previewFeatureTransformation(sessionId, featureName, config) {
+  const res = await fetch(`${API_BASE}/prep/preview_feature`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ session_id: sessionId, feature_name: featureName, config }),
+  });
+  if (!res.ok) throw new Error('Échec de la prévisualisation');
+  return res.json();
+}
+
+export async function executePipeline(sessionId, plan, dropDuplicates = true) {
+  const res = await fetch(`${API_BASE}/prep/execute`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ session_id: sessionId, plan, drop_duplicates: dropDuplicates }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: 'Erreur d’exécution' }));
+    throw new Error(err.detail || 'Échec de l’exécution du pipeline');
+  }
+  return res.json();
+}
+
+export async function getExportSummary(sessionId) {
+  const res = await fetch(`${API_BASE}/export/summary/${sessionId}`);
+  if (!res.ok) throw new Error('Résumé d’export indisponible');
+  return res.json();
+}
+
+export function getDownloadUrl(sessionId, fileType) {
+  return `${API_BASE}/export/download/${sessionId}/${fileType}`;
+}
+
+// ---------------------------------------------------------------------------
+// 5. Authentification & Cybersécurité
+// ---------------------------------------------------------------------------
+
+export function getAuthToken() {
+  return localStorage.getItem('dataprep_auth_token');
+}
+
+export function setAuthToken(token) {
+  if (token) localStorage.setItem('dataprep_auth_token', token);
+  else localStorage.removeItem('dataprep_auth_token');
+}
+
+export async function loginUser(username, password) {
+  const res = await fetch(`${API_BASE}/auth/login`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ username, password }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: 'Échec de connexion' }));
+    throw new Error(err.detail || 'Identifiants invalides');
+  }
+  const data = await res.json();
+  if (data.token) setAuthToken(data.token);
+  return data;
+}
+
+export async function verifyAuthToken() {
+  const token = getAuthToken();
+  if (!token) return null;
+  try {
+    const res = await fetch(`${API_BASE}/auth/verify`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (!res.ok) {
+      setAuthToken(null);
+      return null;
+    }
+    return res.json();
+  } catch {
+    return null;
+  }
+}
+
+export async function getDatasetSecurityAudit(sessionId) {
+  const res = await fetch(`${API_BASE}/security/audit-data/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible d’effectuer l’audit de sécurité du dataset');
+  return res.json();
+}
+
+export async function getDiagnostics(sessionId) {
+  const res = await fetch(`${API_BASE}/debugger/diagnostics/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible de charger le diagnostic système');
+  return res.json();
+}
+
+// ---------------------------------------------------------------------------
+// 6. Modélisation Machine Learning (KNN, Régression, Arbres, etc.)
+// ---------------------------------------------------------------------------
+
+export async function getAvailableModels(sessionId) {
+  const res = await fetch(`${API_BASE}/models/available/${sessionId}`);
+  if (!res.ok) throw new Error('Impossible de charger la liste des modèles');
+  return res.json();
+}
+
+export async function trainModel(sessionId, modelId, hyperparams = {}, rebalancingStrategy = 'none', rebalancingParams = null) {
+  const res = await fetch(`${API_BASE}/models/train`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      session_id: sessionId,
+      model_id: modelId,
+      hyperparams,
+      rebalancing_strategy: rebalancingStrategy,
+      rebalancing_params: rebalancingParams,
+    }),
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: "Echec de l'entrainement du modele" }));
+    throw new Error(err.detail || "Erreur lors de l'entrainement");
+  }
+  return res.json();
+}
+
+export function getRebalancedTrainUrl(sessionId) {
+  return `${API_BASE}/models/download-rebalanced-train/${sessionId}`;
+}
+export async function getCurrentModel(sessionId) {
+  const res = await fetch(`${API_BASE}/models/current/${sessionId}`);
+  if (!res.ok) return null;
+  return res.json();
+}
+
+export function getModelDownloadUrl(sessionId) {
+  return `${API_BASE}/models/download/${sessionId}`;
+}
+
+export function getModelManifestUrl(sessionId) {
+  return `${API_BASE}/models/manifest/${sessionId}`;
+}

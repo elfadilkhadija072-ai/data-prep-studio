@@ -1,0 +1,201 @@
+id,date_inscription,note,commentaire,pays,colonne_vide,montant,cible
+1,01/01/2022,,Parfait,Maroc,,36.2,oui
+2,02/01/2022,1.0,"Moyen, à améliorer",Maroc,,82.35,oui
+3,03/01/2022,5.0,Parfait,Maroc,,111.22,oui
+4,04/01/2022,5.0,Parfait,Maroc,,9999.0,oui
+5,05/01/2022,1.0,Parfait,Maroc,,88.41,
+6,06/01/2022,3.0,"Moyen, à améliorer",Maroc,,57.1,oui
+7,07/01/2022,,Parfait,Maroc,,63.2,oui
+8,08/01/2022,3.0,Livraison lente,Maroc,,,oui
+9,09/01/2022,5.0,Très bien,Maroc,,66.44,oui
+10,10/01/2022,5.0,"Moyen, à améliorer",Maroc,,91.56,oui
+11,11/01/2022,3.0,Livraison lente,Maroc,,33.22,non
+12,12/01/2022,,Très bien,Maroc,,126.56,oui
+13,13/01/2022,2.0,"Moyen, à améliorer",Maroc,,95.07,oui
+14,14/01/2022,2.0,Parfait,Maroc,,75.44,non
+15,15/01/2022,3.0,Très bien,Maroc,,94.39,oui
+16,16/01/2022,3.0,"Moyen, à améliorer",Maroc,,44.75,oui
+17,17/01/2022,3.0,Très bien,Maroc,,109.56,oui
+18,18/01/2022,,Livraison lente,Maroc,,71.9,oui
+19,19/01/2022,2.0,Très bien,Maroc,,74.9,oui
+20,20/01/2022,,Parfait,Maroc,,67.71,oui
+21,21/01/2022,1.0,Très bien,Maroc,,65.48,oui
+22,22/01/2022,,Parfait,Maroc,,97.37,oui
+23,23/01/2022,5.0,Parfait,Maroc,,86.4,
+24,24/01/2022,1.0,Parfait,Maroc,,96.29,oui
+25,25/01/2022,3.0,Parfait,Maroc,,79.78,non
+26,26/01/2022,2.0,Très bien,Maroc,,92.83,oui
+27,27/01/2022,,Parfait,Maroc,,69.53,oui
+28,28/01/2022,3.0,Livraison lente,Maroc,,135.74,oui
+29,29/01/2022,3.0,Parfait,Maroc,,40.8,oui
+30,30/01/2022,1.0,Parfait,Maroc,,111.52,oui
+31,31/01/2022,,Livraison lente,Maroc,,114.2,non
+32,01/02/2022,1.0,"Moyen, à améliorer",Maroc,,58.7,oui
+33,02/02/2022,,Très bien,Maroc,,135.73,oui
+34,03/02/2022,5.0,Très bien,Maroc,,104.89,oui
+35,04/02/2022,1.0,"Moyen, à améliorer",Maroc,,104.28,
+36,05/02/2022,2.0,Parfait,Maroc,,80.7,oui
+37,06/02/2022,2.0,Livraison lente,Maroc,,,oui
+38,07/02/2022,2.0,"Moyen, à améliorer",Maroc,,74.76,oui
+39,08/02/2022,2.0,Très bien,Maroc,,89.76,oui
+40,09/02/2022,,Livraison lente,Maroc,,115.03,oui
+41,10/02/2022,3.0,Livraison lente,Maroc,,84.53,non
+42,11/02/2022,2.0,Parfait,Maroc,,,oui
+43,12/02/2022,,Livraison lente,Maroc,,100.61,oui
+44,13/02/2022,2.0,Livraison lente,Maroc,,103.03,oui
+45,14/02/2022,5.0,Parfait,Maroc,,96.37,oui
+46,15/02/2022,4.0,"Moyen, à améliorer",Maroc,,,oui
+47,16/02/2022,3.0,Parfait,Maroc,,73.23,oui
+48,17/02/2022,2.0,"Moyen, à améliorer",Maroc,,56.78,oui
+49,18/02/2022,5.0,Très bien,Maroc,,58.3,oui
+50,19/02/2022,5.0,"Moyen, à améliorer",Maroc,,39.11,oui
+51,20/02/2022,1.0,Très bien,Maroc,,85.92,oui
+52,21/02/2022,5.0,Très bien,Maroc,,77.91,non
+53,22/02/2022,4.0,Parfait,Maroc,,69.0,oui
+54,23/02/2022,1.0,Parfait,Maroc,,,oui
+55,24/02/2022,4.0,Très bien,Maroc,,48.82,oui
+56,25/02/2022,1.0,Parfait,Maroc,,108.02,oui
+57,26/02/2022,1.0,Très bien,Maroc,,,oui
+58,27/02/2022,,"Moyen, à améliorer",Maroc,,,oui
+59,28/02/2022,3.0,Livraison lente,Maroc,,,oui
+60,01/03/2022,4.0,"Moyen, à améliorer",Maroc,,115.97,oui
+61,02/03/2022,3.0,Livraison lente,Maroc,,76.4,oui
+62,03/03/2022,1.0,Parfait,Maroc,,87.25,oui
+63,04/03/2022,1.0,Très bien,Maroc,,138.14,
+64,05/03/2022,5.0,Très bien,Maroc,,,oui
+65,06/03/2022,5.0,Parfait,Maroc,,72.34,oui
+66,07/03/2022,4.0,Livraison lente,Maroc,,65.17,oui
+67,08/03/2022,1.0,Livraison lente,Maroc,,71.86,oui
+68,09/03/2022,,"Moyen, à améliorer",Maroc,,92.75,non
+69,10/03/2022,4.0,"Moyen, à améliorer",Maroc,,,oui
+70,11/03/2022,,Livraison lente,Maroc,,70.12,oui
+71,12/03/2022,1.0,Livraison lente,Maroc,,,oui
+72,13/03/2022,5.0,Très bien,Maroc,,77.14,oui
+73,14/03/2022,3.0,Livraison lente,Maroc,,137.49,oui
+74,15/03/2022,1.0,Livraison lente,Maroc,,82.27,oui
+75,16/03/2022,2.0,Très bien,Maroc,,124.63,non
+76,17/03/2022,3.0,"Moyen, à améliorer",Maroc,,88.93,oui
+77,18/03/2022,1.0,Parfait,Maroc,,104.07,non
+78,19/03/2022,,Livraison lente,Maroc,,61.88,non
+79,20/03/2022,3.0,Très bien,Maroc,,58.66,oui
+80,21/03/2022,5.0,Très bien,Maroc,,91.49,oui
+81,22/03/2022,,Livraison lente,Maroc,,104.71,oui
+82,23/03/2022,,"Moyen, à améliorer",Maroc,,81.01,non
+83,24/03/2022,5.0,Parfait,Maroc,,,oui
+84,25/03/2022,5.0,Livraison lente,Maroc,,45.99,oui
+85,26/03/2022,,Parfait,Maroc,,44.32,oui
+86,27/03/2022,,Très bien,Maroc,,,oui
+87,28/03/2022,,"Moyen, à améliorer",Maroc,,82.74,oui
+88,29/03/2022,5.0,Très bien,Maroc,,108.13,oui
+89,30/03/2022,2.0,Livraison lente,Maroc,,79.66,non
+90,31/03/2022,3.0,Très bien,Maroc,,23.49,oui
+91,01/04/2022,,"Moyen, à améliorer",Maroc,,,oui
+92,02/04/2022,3.0,"Moyen, à améliorer",Maroc,,75.93,oui
+93,03/04/2022,2.0,Très bien,Maroc,,132.4,oui
+94,04/04/2022,5.0,Très bien,Maroc,,43.57,oui
+95,05/04/2022,5.0,Livraison lente,Maroc,,70.23,oui
+96,06/04/2022,2.0,Parfait,Maroc,,,oui
+97,07/04/2022,,Très bien,Maroc,,91.25,oui
+98,08/04/2022,2.0,"Moyen, à améliorer",Maroc,,94.08,oui
+99,09/04/2022,4.0,Très bien,Maroc,,82.86,oui
+100,10/04/2022,3.0,Parfait,Maroc,,88.25,oui
+101,11/04/2022,3.0,"Moyen, à améliorer",Maroc,,99.44,oui
+102,12/04/2022,1.0,Parfait,Maroc,,59.76,oui
+103,13/04/2022,,Très bien,Maroc,,101.95,oui
+104,14/04/2022,2.0,Très bien,Maroc,,45.67,oui
+105,15/04/2022,2.0,Livraison lente,Maroc,,88.21,oui
+106,16/04/2022,,Livraison lente,Maroc,,84.47,oui
+107,17/04/2022,5.0,Parfait,Maroc,,64.59,non
+108,18/04/2022,1.0,Parfait,Maroc,,79.43,oui
+109,19/04/2022,,Parfait,Maroc,,64.44,oui
+110,20/04/2022,5.0,Livraison lente,Maroc,,53.21,oui
+111,21/04/2022,1.0,"Moyen, à améliorer",Maroc,,,oui
+112,22/04/2022,,"Moyen, à améliorer",Maroc,,52.4,oui
+113,23/04/2022,3.0,Très bien,Maroc,,,oui
+114,24/04/2022,2.0,"Moyen, à améliorer",Maroc,,51.25,oui
+115,25/04/2022,4.0,"Moyen, à améliorer",Maroc,,97.8,oui
+116,26/04/2022,3.0,Très bien,Maroc,,50.46,oui
+117,27/04/2022,3.0,Très bien,Maroc,,65.84,oui
+118,28/04/2022,3.0,Livraison lente,Maroc,,64.38,oui
+119,29/04/2022,5.0,"Moyen, à améliorer",Maroc,,113.13,oui
+120,30/04/2022,,Parfait,Maroc,,88.26,non
+121,01/05/2022,,"Moyen, à améliorer",Maroc,,74.71,oui
+122,02/05/2022,5.0,Parfait,Maroc,,,oui
+123,03/05/2022,5.0,Livraison lente,Maroc,,27.32,oui
+124,04/05/2022,5.0,Très bien,Maroc,,78.92,oui
+125,05/05/2022,4.0,Très bien,Maroc,,129.94,oui
+126,06/05/2022,2.0,Livraison lente,Maroc,,,oui
+127,07/05/2022,4.0,Livraison lente,Maroc,,81.7,oui
+128,08/05/2022,2.0,"Moyen, à améliorer",Maroc,,,oui
+129,09/05/2022,2.0,Livraison lente,Maroc,,102.39,oui
+130,10/05/2022,3.0,Parfait,Maroc,,30.06,oui
+131,11/05/2022,5.0,"Moyen, à améliorer",Maroc,,37.94,oui
+132,12/05/2022,3.0,Très bien,Maroc,,85.26,oui
+133,13/05/2022,2.0,"Moyen, à améliorer",Maroc,,62.13,oui
+134,14/05/2022,3.0,Parfait,Maroc,,112.8,non
+135,15/05/2022,2.0,Parfait,Maroc,,72.12,non
+136,16/05/2022,4.0,Parfait,Maroc,,31.64,non
+137,17/05/2022,,Parfait,Maroc,,48.3,oui
+138,18/05/2022,3.0,Très bien,Maroc,,11.26,oui
+139,19/05/2022,2.0,"Moyen, à améliorer",Maroc,,74.15,oui
+140,20/05/2022,2.0,Très bien,Maroc,,75.29,oui
+141,21/05/2022,,Très bien,Maroc,,69.39,oui
+142,22/05/2022,2.0,Parfait,Maroc,,106.97,oui
+143,23/05/2022,1.0,Parfait,Maroc,,109.96,non
+144,24/05/2022,2.0,Très bien,Maroc,,75.74,oui
+145,25/05/2022,3.0,Livraison lente,Maroc,,26.63,oui
+146,26/05/2022,1.0,Livraison lente,Maroc,,95.43,oui
+147,27/05/2022,,Très bien,Maroc,,93.88,oui
+148,28/05/2022,1.0,Parfait,Maroc,,87.73,oui
+149,29/05/2022,3.0,Parfait,Maroc,,104.54,oui
+150,30/05/2022,4.0,Livraison lente,Maroc,,50.88,oui
+151,31/05/2022,5.0,Livraison lente,Maroc,,,oui
+152,01/06/2022,2.0,"Moyen, à améliorer",Maroc,,56.01,oui
+153,02/06/2022,5.0,Parfait,Maroc,,,oui
+154,03/06/2022,2.0,"Moyen, à améliorer",Maroc,,37.82,oui
+155,04/06/2022,4.0,Parfait,Maroc,,56.74,oui
+156,05/06/2022,3.0,Très bien,Maroc,,,oui
+157,06/06/2022,,Très bien,Maroc,,73.48,oui
+158,07/06/2022,4.0,Parfait,Maroc,,101.0,oui
+159,08/06/2022,3.0,"Moyen, à améliorer",Maroc,,85.92,oui
+160,09/06/2022,2.0,"Moyen, à améliorer",Maroc,,77.38,oui
+161,10/06/2022,,Parfait,Maroc,,114.1,oui
+162,11/06/2022,5.0,Très bien,Maroc,,74.08,oui
+163,12/06/2022,5.0,Livraison lente,Maroc,,35.48,oui
+164,13/06/2022,5.0,"Moyen, à améliorer",Maroc,,59.92,oui
+165,14/06/2022,1.0,Très bien,Maroc,,93.78,oui
+166,15/06/2022,3.0,Parfait,Maroc,,,oui
+167,16/06/2022,1.0,Très bien,Maroc,,40.82,oui
+168,17/06/2022,4.0,Très bien,Maroc,,61.89,oui
+169,18/06/2022,5.0,Livraison lente,Maroc,,65.46,oui
+170,19/06/2022,,Parfait,Maroc,,70.86,oui
+171,20/06/2022,4.0,Très bien,Maroc,,45.6,non
+172,21/06/2022,5.0,Livraison lente,Maroc,,64.29,oui
+173,22/06/2022,5.0,Livraison lente,Maroc,,61.78,oui
+174,23/06/2022,2.0,Parfait,Maroc,,99.29,oui
+175,24/06/2022,1.0,Très bien,Maroc,,,oui
+176,25/06/2022,,Parfait,Maroc,,76.35,oui
+177,26/06/2022,5.0,Livraison lente,Maroc,,,oui
+178,27/06/2022,,Parfait,Maroc,,83.5,oui
+179,28/06/2022,5.0,"Moyen, à améliorer",Maroc,,59.59,oui
+180,29/06/2022,1.0,Parfait,Maroc,,51.33,oui
+181,30/06/2022,4.0,Livraison lente,Maroc,,56.49,oui
+182,01/07/2022,1.0,Très bien,Maroc,,64.13,oui
+183,02/07/2022,5.0,Parfait,Maroc,,50.91,oui
+184,03/07/2022,4.0,Parfait,Maroc,,84.05,oui
+185,04/07/2022,5.0,"Moyen, à améliorer",Maroc,,98.24,oui
+186,05/07/2022,3.0,Livraison lente,Maroc,,40.32,oui
+187,06/07/2022,1.0,"Moyen, à améliorer",Maroc,,,oui
+188,07/07/2022,,Livraison lente,Maroc,,74.5,oui
+189,08/07/2022,,Parfait,Maroc,,,oui
+190,09/07/2022,4.0,Parfait,Maroc,,79.68,oui
+191,10/07/2022,1.0,Très bien,Maroc,,43.66,oui
+192,11/07/2022,5.0,Parfait,Maroc,,48.44,oui
+193,12/07/2022,,"Moyen, à améliorer",Maroc,,,oui
+194,13/07/2022,3.0,Livraison lente,Maroc,,105.72,
+195,14/07/2022,2.0,Parfait,Maroc,,24.65,oui
+196,15/07/2022,,"Moyen, à améliorer",Maroc,,,oui
+197,16/07/2022,3.0,"Moyen, à améliorer",Maroc,,109.74,non
+198,17/07/2022,1.0,"Moyen, à améliorer",Maroc,,76.17,oui
+199,18/07/2022,3.0,Parfait,Maroc,,93.76,oui
+200,19/07/2022,4.0,"Moyen, à améliorer",Maroc,,62.42,oui
